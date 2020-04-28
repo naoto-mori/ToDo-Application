@@ -15,7 +15,7 @@ String errorMsg = (String)request.getAttribute("errorMsg");
 <title>ToDo-Application</title>
 </head>
 <body>
-<h1>ToDo-Application（仮）</h1>
+<h1>ToDo-Application!!（仮）</h1>
 
 <form action="/ToDo-Application/Main" method="post"> <!-- ②リマインド内容をMainサーブレットにdoPost -->
 	<p>リマインド内容：<input type="text" name="remind"></p>
