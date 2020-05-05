@@ -16,3 +16,39 @@
 ・追加したToDoはタグからソートをかけることができる。(完了リストも同様)<br>
 # 機能一覧
 ## 機能をリストで書いていきます！
+・アカウント作成機能<br>
+・ログイン、ログアウト機能<br>
+・ToDoの投稿及び表示<br>
+・タグの一覧表示<br>
+・ToDoの編集<br>
+・ToDoの削除<br>
+・ToDoの完了処理<br>
+・ToDoのソート機能<br>
+・ToDoの達成目標に近づいた際のアラート機能<br>
+・ヘルプページの表示<br>
+
+# データベース設計
+## accountテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|varchar(10)|primary_key|
+|password|varchar(10)|not null|
+|name|varchar(20)|not null
+
+## todoテーブル
+|Column|Type|Options|
+|------|----|-------|
+|todo_id|int|primary_key auto_increment|
+|title|varchar(30)|not null|
+|memo|varchar(500)| |
+|tag|int(2)|not null|
+|post_day|date|not null|
+|update_day|date|not null|
+|dedline|date| |
+|flag|int(1)|default 0|
+
+## tagテーブル
+|Column|Type|Options|
+|------|----|-------|
+|tag_id|int|primary_key auto_increment|
+|name|varchar(10)|default else|
