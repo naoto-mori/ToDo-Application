@@ -41,7 +41,7 @@
 |todo_id|int|primary_key auto_increment|
 |title|varchar(30)|not null|
 |memo|varchar(500)| |
-|tag|int(2)|not null|
+|tag|int|not null|
 |post_day|date|not null|
 |update_day|date|not null|
 |dedline|date| |
