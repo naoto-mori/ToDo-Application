@@ -39,6 +39,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |todo_id|int|primary_key auto_increment|
+|user_id|varchar(10)|not null|
 |title|varchar(30)|not null|
 |memo|varchar(500)| |
 |tag|int|not null|
