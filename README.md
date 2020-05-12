@@ -39,7 +39,7 @@
 ## todoテーブル
 |Column|Type|Options|
 |------|----|-------|
-|todo_id|int|primary_key auto_increment|
+|todo_id|int|primary　key auto_increment|
 |user_id|varchar(10)|not null|
 |title|varchar(30)|not null|
 |memo|varchar(500)| |
@@ -52,5 +52,5 @@
 ## tagテーブル
 |Column|Type|Options|
 |------|----|-------|
-|tag_id|int|primary_key auto_increment|
+|tag_id|int|primary　key auto_increment|
 |name|varchar(10)|default else|
