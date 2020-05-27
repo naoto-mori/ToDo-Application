@@ -23,11 +23,8 @@ public class AccountDAO {
 		User selectUser = null;
 
 
-		Connection conn = null;
 
-		try {
-			//DBに接続
-			conn = DriverManager.getConnection(JDBC_URL , DB_USER , DB_PASS );
+		try ( Connection conn = DriverManager.getConnection(JDBC_URL , DB_USER , DB_PASS ) ) {
 
 			//SQL文(selsct)を記述
 			//?はあとから記述
@@ -53,7 +50,6 @@ public class AccountDAO {
 
 				selectUser = new User(id, pass);
 
-
 			} else {
 				//処理なし
 				//selectUserはnullのまま
@@ -64,17 +60,7 @@ public class AccountDAO {
 			e.printStackTrace();
 			return null;
 
-		} finally {
-
-			try {
-				conn.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-				return null;
-			}
-
 		}
-
 
 
 		return selectUser;
